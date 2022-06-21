@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* selectores de atributo */
+
+h1 {
+    background-color: blue;
+}
+
+h2 {
+    background-color: chartreuse;
+}
+
+/* p {
+    background-color: aqua;
+} */
+
+span {
+    background-color: coral;
+}
+
+/* selectores de clase */
+
+.selectorClass {
+    background-color: dodgerblue;
+}
+
+/* selector de id es unico no puede haber otro con el mismo nomnbre*/
+
+#selectorId {
+    background-color: chartreuse;
+}
+
+/* selectores de hijos e hijos directos */
+
+/* ul > li {
+    background-color: gold;
+} */
+
+/* selector de hermanos */
+
+.primerLiHermanos ~ li {
+    background-color: darkcyan;
+}   
+
+/* selector hermanos adyacentes */
+
+.primerLiAdyacente + li {
+    background-color: crimson;
+}
+
+/* pseudoclases */
+
+.boxHover {
+    background-color: pink;
+}
+
+/* lo que hace el hover es que cuando se pase el puntero por encima cambia a este color */
+.boxHover:hover {
+    background-color: blue;
+}
+
+.boxHover:active {
+    background-color: chartreuse;
+}
+
+/* pseuelemento */
+
+.boxHover p::after {
+    content: "🐈"
+}
+
+.boxHover p::before {
+    content: "🐵"
+}
+
+
+.ntc p:nth-child(odd) {
+    background-color: crimson;
+}
+
+.ntc p:nth-child(4){
+    background-color: rgb(47, 50, 255);
+}

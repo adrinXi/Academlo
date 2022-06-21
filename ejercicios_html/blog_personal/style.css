@@ -1,0 +1,95 @@
+* {
+    /* La propiedad CSS margin establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen:  margin-top (en-US), margin-right, margin-bottom y margin-left (en-US). */
+    margin: 0;
+    /* La propiedad CSS padding establece el espacio de relleno requerido por todos los lados de un elemento. El área de padding es el espacio entre el contenido del elemento y su borde (border). No se permiten valores negativos. */
+    padding: 0;
+}
+
+:root {
+    /* La propiedad font-size especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades em y ex. */
+    font-size: 20px;
+}
+
+.primeraSeccion {
+        height: 45vh;
+        background-image: url(./imagenes/indian.jpg);
+        /* La propiedad CSS background-size especifica el tamaño de las imágenes de fondo */
+        /* contain => Escala la imagen al mayor tamaño posible sin recortarla ni estirarla. */
+        background-size: cover;
+        /* La propiedad CSS background-attachment determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor. */
+        /*fixed => Especifica si las imágenes de fondo se fijan con respecto a la ventana gráfica ('fixed') o se desplazan junto con el elemento ('scroll') o su contenido ('local').  */
+        background-attachment: fixed;
+        text-align: center;
+        background-position: center;
+}
+
+.primeraSeccion > h2 {
+    padding-top: 130px;
+    color: #eeeb4e;
+    /* La propiedad font-weight de CSS especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold. */
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.secondClass > h2 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #52c057;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.secondClass {
+    height: 100vh;
+    background-color: #031d1d;
+}
+
+.secondClass p {
+    padding-top: 2rem;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color:#52c057
+}
+
+/* NAVEGACION PRINCIPAL */
+
+ul {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    /*  con list-style-type: none;, que no se van a utilizar bolitas o marcas de ningún tipo al lado de los elementos de la lista. */
+    list-style-type: none;
+    /* para centrarla le asignamos text-align: center */
+    text-align: center;
+}
+
+li {
+    /*  display: inline; para conseguir que los elementos se dispongan uno detrás de otro en la misma línea */
+    display: inline;
+    /*  text-align: center; volvemos a indicar que cada uno de los elementos tiene el texto centrado */
+    text-align: center;
+    /* margin indicamos un margen entre los elementos. */
+    margin: 0px, 10px, 0px, 0px;
+}
+
+li a {
+    /*  padding: 2px 7px 2px 7px; para que el enlace tenga un poco de espacio a los lados */
+    padding: 2px, 7px, 2px, 2px;
+    /* color de la letra del enlace con color */
+    color: rgb(81, 110, 12);
+    /*  border: 1px solid # ccc */
+    border: 1px, solid, #ccc;
+    /* quitamos el subrayado a los enlaces con text-decoration: none */
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/* pseudoclase para cuando pasemos el cursor por encima del enlace*/
+li a:hover {
+    background-color: #333333;
+    color: #fff;
+}
+
+/* cajas con fotos */
+
+

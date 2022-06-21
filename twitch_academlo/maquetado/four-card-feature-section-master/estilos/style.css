@@ -1,0 +1,136 @@
+/* en el root se colocan todos los elementos que se van  usar durante todo el proyecto */
+:root {
+    --color-red: hsl(0, 78%, 62%);
+    --color-cyan: hsl(180, 62%, 55%);
+    --color-orange: hsl(34, 97%, 64%);
+    --color-blue: hsl(212, 86%, 64%);
+    --color-neutral-dark-blue: hsl(234, 12%, 34%);
+    --color-neutral-grayish-blue: hsl(229, 6%, 66%);
+    --color-neutral-ligth-gray: hsl(0, 0%, 98%);
+    --weigth-ligth: 200;
+    --weigth-regular: 400;
+    --weigth-bold: 600;
+}
+
+/* reset */
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* maquetado mobile (para pantallas de celular) */
+.body {
+    /* el primer valor representa arriba y abajo y el segundo valor representa izq y derecha */
+    padding: 80px 30px;
+    background-color: var(--color-neutral-ligth-gray);
+}
+
+/* se coloco para que separe el header del main */
+.header {
+    margin-bottom: 60px;
+}
+
+.principal-title {
+    font-size: 1.5rem;
+    font-weight: var(--weigth-ligth);
+    color: var(--color-neutral-dark-blue);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.principal-title__bold {
+    font-weight: var(--weigth-bold);
+}
+
+.principal-texto {
+    color: var(--color-neutral-grayish-blue);
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+.card-container {
+    /* display flex para hacer los elementos flexibles */
+    display: flex;
+    /* justify content en center para centrar los elememtos */
+    justify-content: center;
+    /* flex wrap es para que hagan un salto de linea los elementos */
+    flex-wrap: wrap;
+    /* gap es la separacion entre los elementos hijos */
+    gap: 25px;
+}
+
+.card {
+    width: min(100%, 300px);
+    padding: 20px;
+    background-color: white;
+    border-top:4px solid var(--color-cyan);
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 var(--color-neutral-dark-blue);
+}
+
+.card__title {
+    color: var(--color-neutral-dark-blue);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+ .card__text {
+    color: var(--color-neutral-grayish-blue);
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+    margin-bottom: 30px;
+ }
+
+ .card__img {
+    width: 50px;
+    /* pasamos laimagen a un elemento en bloque */
+    display: block;
+    /* al transformarlo ya podemos moverlo dandole un margin auto */
+    margin-left: auto;
+ }
+
+.card_red {
+    border-top: 4px solid var(--color-red);
+}
+
+.card_orange {
+    border-top: 4px solid var(--color-orange);
+}
+
+.card_blue {
+    border-top: 4px solid var(--color-blue);
+}
+
+/* desktop */
+@media screen and (min-width: 1010px) {
+    .card-container {
+        width: 950px;
+        margin-left: auto;
+        margin-right: auto;
+        /* display grid se divide en filas y columnas */
+        display: grid;
+        /* grid template colums es para definir el numero de las columas en el repeat (va el # de columnas que queremos, 1fr significa que sea totalmente flexible) */
+        grid-template-columns: repeat(3, 1fr);
+        /* grid template rows es para definir el numero de filas */
+        grid-template-rows: repeat(2, 1fr);
+    }
+    /* nt-child es una seudoclase (aqui va el numero del hijo que queremos modificar) */
+    .card:nth-child(1), .card:nth-child(4) {
+        /* grid row selecciona las filas, span le dice al elemento que numero de filas va a ocupar en este caso 2 */
+        grid-row: span 2;
+        /* aling self para que el elemento mismo se centre */
+        align-self: center;
+    }
+    .card:nth-child(3) {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+}
