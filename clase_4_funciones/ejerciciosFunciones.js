@@ -1,10 +1,12 @@
-// 
-let varGlobal = "Hola yo soy de: ";
+// ! declara una funcion que reciba como parametros dos numeros y que retorne la suma de esos dos numeros.
 
-function miFuncion(){
-    let varLocal = "México - CDMX";
+let num1, num2;
+let resultado;
 
-    return varGlobal + "-" + varLocal;
+function sumaNumeros(num1, num2) {
+    resultado = num1 + num2;
+
+    return resultado;
 }
 
-console.log(miFuncion());
+console.log(sumaNumeros(45, 5));
